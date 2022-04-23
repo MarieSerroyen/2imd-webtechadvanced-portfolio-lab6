@@ -30,3 +30,27 @@ table.rank td{
 table.rank tr:nth-child(even) {
   background-color: #DDEDF5;
 }
+
+.skaterDropdown {
+  width: 200px;
+  height: 30px;
+  margin-right: 0.5em;
+  border: 2px solid black;
+}
+
+.inputScore {
+  width: 100px;
+  height: 25px;
+  margin-right: 0.5em;
+  border: 2px solid black;
+}
+
+.updateBtn {
+  width: 170px;
+  height: 30px;
+  margin-right: 0.5em;
+  background-color: aqua;
+  border: 2px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
