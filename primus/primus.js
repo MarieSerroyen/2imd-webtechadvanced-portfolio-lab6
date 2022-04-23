@@ -8,7 +8,12 @@ let go = (server) => {
 
     primus.on('connection', (spark) => {
         // spark is the new connection.
-        console.log("👌");
+        //console.log("👌");
+        spark.on("data", (data) => {
+            console.log("Wow, er is data!");
+            console.log(data);
+            primus.write(data);
+        });
     });
 
 

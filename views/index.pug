@@ -1,43 +1,23 @@
 extends layout
 
 block content
-  h1  ⛸ Live Ice Skating scoreboard ⛸
+    h1  ⛸ Update Ice Skating scoreboard ⛸
 
-  table.rank 
-    tableheader 
-      tr 
-        th Skater
-        th Score 
-    tablebody 
-      tr 
-        td Brian Boitano
-        td.bb 1 
-      tr 
-        td Kurt Browning
-        td.kb 1
-      tr 
-        td Richard Button 
-        td.rb 1
-      tr 
-        td Patrick Chan 
-        td.pc 1
-      tr 
-        td John Curry 
-        td.jc 1
-      tr 
-        td Arthur Dmitriev
-        td.ad 1
-      tr 
-        td Peggy Fleming 
-        td.pf 1
-      tr 
-        td Gillis Grafström 
-        td.gg 1
-      tr 
-        td Dorothy Hamill 
-        td.dh 1
-      tr 
-        td Scott Hamilton 
-        td.sh 1
-  script(src='javascripts/app.js')
+    form.scoreboardFrom
+        select.dropdown(name="skater" class="skaterDropdown")
+            option(value='bb') Brian Boitano
+            option(value="kb") Kurt Browning 
+            option(value="rb") Richard Button 
+            option(value="pc") Patrick Chan 
+            option(value="jc") John Curry 
+            option(value="ad") Artur Dmitriev 
+            option(value="pf") Peggy Fleming 
+            option(value="gg") Gillis Grafström 
+            option(value="dh") Dorothy Hamill 
+            option(value="sh") Scott Hamilton
+
+        input(type='number' value="0" min="0" class="inputScore")
+        input(type='submit' value="update skaters score" class="updateBtn")        
+
+    script(src='javascripts/live.js')
 

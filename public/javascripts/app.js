@@ -1,4 +1,3 @@
-//PRIMUS LIVE
 const primus = Primus.connect("/", {
     reconnect: {
         max: Infinity, // Number: The max delay before we try to reconnect.
@@ -6,3 +5,13 @@ const primus = Primus.connect("/", {
         retries: 10 // Number: How many times we should try to reconnect.
     },
 });
+
+document.querySelector(".scoreboardFrom").addEventListener("submit", e =>{
+    console.log("👍");
+    e.preventDefault();
+
+    primus.write ({
+        skater: skater,
+    })
+});
+
