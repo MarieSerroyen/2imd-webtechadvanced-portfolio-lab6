@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+table.rank {
+  width: 500px;
+  background-color: aqua;
+  border-collapse: collapse;
+  border-width: 4px;
+  border: 2px solid black;
+}
+
+table.rank th{
+  font-size: 24px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+table.rank td{
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+table.rank tr:nth-child(even) {
+  background-color: #DDEDF5;
+}
