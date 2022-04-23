@@ -1,7 +1,21 @@
 extends layout
 
 block content
-  h1  Live Ice Skating scoreboard
+    h1  Update Ice Skating scoreboard
 
+    select.dropdown(name="skater" class="skaterDropdown")
+        option(value='bb') Brian Boitano
+        option(value="kb") Kurt Browning 
+        option(value="rb") Richard Button 
+        option(value="pc") Patrick Chan 
+        option(value="jc") John Curry 
+        option(value="ad") Artur Dmitriev 
+        option(value="pf") Peggy Fleming 
+        option(value="gg") Gillis Grafström 
+        option(value="dh") Dorothy Hamill 
+        option(value="sh") Scott Hamilton
 
-  script(src='javascripts/app.js')
+    input(type='number' value="0" min="0" class="inputScore")
+    input(type='submit' value="update skaters score" class="updateBtn")        
+
+    script(src='javascripts/app.js')
