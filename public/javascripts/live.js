@@ -10,7 +10,8 @@ primus.on("data", data => {
     console.log("We hebben data jongens!");
     console.log(data);
 
-    let skater = "." + data.skater;
+    let skater = "." + data.name;
+    //document.querySelector(skater).style.fontSize = "60px";
 
     console.log(skater);
 });

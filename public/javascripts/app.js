@@ -10,8 +10,12 @@ document.querySelector(".scoreboardFrom").addEventListener("submit", e =>{
     console.log("👍");
     e.preventDefault();
 
+    let dropdown = document.querySelector(".dropdown");
+    let skater = dropdown.options[dropdown.selectedIndex].value;
+    console.log(skater);
+
     primus.write ({
-        skater: skater,
-    })
+        name: skater,
+    });
 });
 
