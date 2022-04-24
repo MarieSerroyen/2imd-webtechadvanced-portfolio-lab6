@@ -11,7 +11,9 @@ primus.on("data", data => {
     console.log(data);
 
     let skater = "." + data.name;
-    //document.querySelector(skater).style.fontSize = "60px";
+    let score = data.score;
 
-    console.log(skater);
+    document.querySelector(skater).innerHTML = score;
+
+    console.log(score);
 });
