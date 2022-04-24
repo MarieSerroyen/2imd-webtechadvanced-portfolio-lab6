@@ -7,15 +7,18 @@ const primus = Primus.connect("/", {
 });
 
 document.querySelector(".scoreboardFrom").addEventListener("submit", e =>{
-    console.log("👍");
+    //console.log("👍");
     e.preventDefault();
 
     let dropdown = document.querySelector(".dropdown");
     let skater = dropdown.options[dropdown.selectedIndex].value;
-    console.log(skater);
+    //console.log(skater);
+    let score = document.querySelector(".inputScore").value;
+    console.log(score);
 
     primus.write ({
         name: skater,
+        score: score,
     });
 });
 
